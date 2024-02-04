@@ -54,7 +54,7 @@ let bmi=Math.round(res * 10) / 10;
    dis.innerHTML="Your BMI is: "+bmi+" <br> <p style=color:"+col(bmi)+ "> "+rng(bmi)+"</p>";
    bar.style.width=2*bmi+"%";
    bar.style.backgroundColor=col(bmi);
-   document.getElementById( 'bottom' ).scrollIntoView();
+   document.getElementById( 'dis' ).scrollIntoView();
 
 }
 
