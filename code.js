@@ -7,12 +7,12 @@ function rng(bmi)
 		return "Under Weight!!";
 
 	}
-	else if(bmi>=18.5&&bmi<=24.9)
+	else if(bmi>=18.5&&bmi<=22.9)
 	{
 		return "Normal, No Risk!";
 	}
 
-	else if(bmi>24.9)
+	else if(bmi>22.9)
 	{
 		return "Obesity!!"
 	}
@@ -29,12 +29,12 @@ function col(bmi)
 		return "blue";
 
 	}
-	else if(bmi>=18.5&&bmi<=24.9)
+	else if(bmi>=18.5&&bmi<=22.9)
 	{
 		return "green";
 	}
 
-	else if(bmi>24.9)
+	else if(bmi>22.9)
 	{
 		return "red"
 	}
