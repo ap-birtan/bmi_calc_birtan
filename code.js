@@ -1,60 +1,47 @@
-
-
-function rng(bmi)
-{
-	if(bmi<18.5)
-	{
-		return "Under Weight!!";
-
-	}
-	else if(bmi>=18.5&&bmi<=24.9)
-	{
-		return "Normal, No Risk!";
-	}
-
-	else if(bmi>24.9)
-	{
-		return "Obesity!!"
-	}
-	else
-	{
-		return "please fill up correctly!"
-	}
+input[type=text]{
+  width: 20%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  font-size: 30px;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
-function col(bmi)
-{
-	if(bmi<18.5)
-	{
-		return "blue";
-
-	}
-	else if(bmi>=18.5&&bmi<=24.9)
-	{
-		return "green";
-	}
-
-	else if(bmi>24.9)
-	{
-		return "red"
-	}
+button{
+  width: 20%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin-left: 4%;
+  margin-top: 3%;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-function calc()
-{
-	let htf= parseInt(document.getElementById("htf").value);
-let hti= parseInt(document.getElementById("hti").value);
-
-let ht= (12*htf+hti)/39.37;
-let wt= parseInt(document.getElementById("wt").value);
-let dis=document.getElementById("dis");
-let bar=document.getElementById("bar");
-let res = wt/(ht*ht);
-let bmi=Math.round(res * 10) / 10;
-   dis.innerHTML="Your BMI is: "+bmi+" <br> <p style=color:"+col(bmi)+ "> "+rng(bmi)+"</p>";
-   bar.style.width=2*bmi+"%";
-   bar.style.backgroundColor=col(bmi);
-   document.getElementById( 'dis' ).scrollIntoView();
-
+button:hover {
+  background-color: #45a049;
 }
 
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
