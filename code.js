@@ -14,7 +14,7 @@ function rng(bmi)
 
 	else if(bmi>22.9)
 	{
-		return "Obesity!!"
+		return "Over Weight!!"
 	}
 	else
 	{
