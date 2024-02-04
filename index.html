@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<script type="text/javascript" src="code.js"></script>
+
+
+
+
+<p style="font-size: 50px;" align="center">
+<img src="bd.png" height="100px", width="100px"><br> বাংলাদেশ ফলিত পুষ্টি গবেষণা ও প্রশিক্ষণ ইনস্টিটিউট (বারটান)
+</p>
+<hr>
+
+<div style="text-align: center;">
+  <form>
+    <label for="ht">Height </label>
+    <input type="text" id="htf" name="htf" placeholder="Feet"> <input type="text" id="hti" name="hti" placeholder="Inches"><br> 
+
+    <label for="wt">Weight</label>
+    <input type="text" id="wt" name="wgt" placeholder="KGs"><br>
+
+   
+  </form>
+    <button onclick="calc()">CALCULATE</button>
+     
+</div>
+
+<div>
+	<p align="center" style="font-size: 30px"><b>Result</b></p>
+	<hr>
+
+	<div id="bar" style="height: 1%; width: 0; background-color: transparent; transition: 500ms linear;" ></div>
+	<div id="dis" style=" font-size: 30px; padding: 20px;"></div>
+</div>
+</body>
+</html>
