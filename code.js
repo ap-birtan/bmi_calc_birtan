@@ -51,10 +51,34 @@ let dis=document.getElementById("dis");
 let bar=document.getElementById("bar");
 let res = wt/(ht*ht);
 let bmi=Math.round(res * 10) / 10;
-   dis.innerHTML="Your BMI is: "+bmi+" <br> <p style=color:"+col(bmi)+ "> "+rng(bmi)+"</p>";
+   dis.innerHTML="Your BMI is: "+bmi+" <br> <p style=color:"+col(bmi)+ "> "+rng(bmi)+"<br>"+shiftt(bmi,wt,ht)+"</p>";
    bar.style.width=2*bmi+"%";
    bar.style.backgroundColor=col(bmi);
    document.getElementById( 'dis' ).scrollIntoView();
+
+}
+
+function shiftt(bmi,wt,ht)
+{
+	let nwt=0;
+	if(bmi<18.5)
+	{
+		nwt=Math.round((18.5*ht*ht-wt) * 10) / 10;
+		return "you have to gain "+nwt+" kG for normal BMI"
+
+	}
+
+	else if(bmi>22.9)
+	{
+       nwt=Math.round((wt-22.9*ht*ht) * 10) / 10;
+		return "you have to loose "+nwt+" kG for normal BMI"
+	}
+	else
+
+	{
+		return "";
+	}
+
 
 }
 
