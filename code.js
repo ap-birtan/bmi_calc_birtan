@@ -64,14 +64,14 @@ function shiftt(bmi,wt,ht)
 	if(bmi<18.5)
 	{
 		nwt=Math.round((18.5*ht*ht-wt) * 10) / 10;
-		return "you have to gain "+nwt+" kG for normal BMI"
+		return "You have to gain "+nwt+" kG for normal BMI"
 
 	}
 
 	else if(bmi>22.9)
 	{
        nwt=Math.round((wt-22.9*ht*ht) * 10) / 10;
-		return "you have to loose "+nwt+" kG for normal BMI"
+		return "You have to loose "+nwt+" kG for normal BMI"
 	}
 	else
 
