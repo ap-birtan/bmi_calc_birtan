@@ -11,10 +11,18 @@ function rng(bmi)
 	{
 		return "Normal, No Risk!";
 	}
-
-	else if(bmi>22.9)
+	else if(bmi>=23&&bmi<=24.9)
 	{
 		return "Over Weight!!"
+	}
+	else if(bmi>=25&&bmi<=29.9)
+	{
+		return "Pre-Obese!!";
+	}
+
+	else if(bmi>30)
+	{
+		return "Obese!!"
 	}
 	else
 	{
@@ -43,18 +51,29 @@ function col(bmi)
 function calc()
 {
 	let htf= parseInt(document.getElementById("htf").value);
-let hti= parseInt(document.getElementById("hti").value);
+	let hti;
+if(document.getElementById("hti").value=="")
+{
+   hti= 0;
+}
+else
+{
+    hti= parseInt(document.getElementById("hti").value);
+}
 
 let ht= (12*htf+hti)/39.37;
 let wt= parseInt(document.getElementById("wt").value);
 let dis=document.getElementById("dis");
 let bar=document.getElementById("bar");
+let tab=document.getElementById("tab");
 let res = wt/(ht*ht);
 let bmi=Math.round(res * 10) / 10;
    dis.innerHTML="Your BMI is: "+bmi+" <br> <p style=color:"+col(bmi)+ "> "+rng(bmi)+"<br>"+shiftt(bmi,wt,ht)+"</p>";
    bar.style.width=2*bmi+"%";
    bar.style.backgroundColor=col(bmi);
+   tab.style.display="block";
    document.getElementById( 'dis' ).scrollIntoView();
+
 
 }
 
@@ -81,4 +100,3 @@ function shiftt(bmi,wt,ht)
 
 
 }
-
