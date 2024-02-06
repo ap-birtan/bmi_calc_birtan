@@ -14,14 +14,14 @@
 <img src="bd.png" height="100px", width="100px"><br> বাংলাদেশ ফলিত পুষ্টি গবেষণা ও প্রশিক্ষণ ইনস্টিটিউট (বারটান)
 </p>
 <hr>
-
+<p align="center" style="font-size: 150%;"><b>BMI Calculator</b></p>
 <div style="text-align: center;">
   <form>
-    <label for="ht">Height </label>
-    <input type="text" id="htf" name="htf" placeholder="Feet"> <input type="text" id="hti" name="hti" placeholder="Inches"><br> 
+    <label for="ht">Height (উচ্চতা) </label>
+    <input type="text" id="htf" name="htf" placeholder="Feet(ফুট)"> <input type="text" id="hti" name="hti" placeholder="Inches(ইঞ্চি)"><br> 
 
-    <label for="wt">Weight</label>
-    <input type="text" id="wt" name="wgt" placeholder="KGs"><br>
+    <label for="wt">Weight (ওজন)</label>
+    <input type="text" id="wt" name="wgt" placeholder="KGs(কেজি)"><br>
 
    
   </form>
@@ -29,12 +29,49 @@
      
 </div>
 
-<div>
+<div style="">
 	<p align="center" style="font-size: 30px"><b>Result</b></p>
 	<hr>
 
 	<div id="bar" style="height: 1%; width: 0; background-color: transparent; transition: 500ms linear;" ></div>
 	<div id="dis" style=" font-size: 30px; padding: 20px;"></div>
+
+	<table id="tab">
+	<caption><b>BMI Chart</b></caption>	
+  <tr>
+    <th>Status</th>
+    <th>BMI(Asia Pacific Region)</th>
+   
+  </tr>
+  <tr>
+    <td>Underweight</td>
+    <td><18.5</td>
+  
+  </tr>
+  <tr>
+    <td>Normal</td>
+    <td>18.5 - 22.9</td>
+   
+  </tr>
+  <tr>
+    <td>Overweight</td>
+    <td>23 - 24.9</td>
+    
+  </tr>
+  <tr>
+    <td>Pre-Obese</td>
+    <td>25 - 29.9</td>
+   
+  </tr>
+  <tr>
+    <td>Obese</td>
+    <td>>30</td>
+    
+  </tr>
+  
+</table>
 </div>
+
+
 </body>
 </html>
